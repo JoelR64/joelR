@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto formativo</title>
+
+    
+    <style>
+        body{
+            margin: 0;
+            background-image: url('https://img.freepik.com/foto-gratis/viejo-fondo-negro-textura-grunge-papel-tapiz-oscuro-pizarra-pizarra-pared-habitacion_1258-28313.jpg');
+        }
+        header{
+            width: 100%;
+            height: 70px;background-color: rgb(0, 0, 0);
+        
+        }
+        nav {
+            padding: 15px;
+            height: auto;
+            display: flex;
+            justify-content:space-between;            
+            margin: 0;
+        }
+        nav li{
+            margin-left: 0px;
+            list-style: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            
+        }
+        
+        .adornoA{  
+            box-shadow:  0 3px 40px #000;
+            align-items: center;
+            border-radius: 5px;
+            padding: 5px;    
+            margin: 20px;
+            color: rgb(236, 233, 233);
+            text-decoration-line: none;
+            
+        }
+        .adornoA:hover{
+            background-color: rgb(85, 7, 121);
+            
+        }
+
+        .adornoB{  
+            background-color: rgb(248, 3, 3);
+            align-items: center;
+            border-radius: 5px;
+            padding: 0px;    
+            margin: 0px;
+            color: rgb(20, 18, 18);
+            text-decoration-line: none;
+            justify-content: space-between;
+            
+        }
+        .adornoB:hover{
+            box-shadow: 0 0 10px #000;
+            background-color: rgb(140, 141, 155);
+            
+        }
+        
+        .carrusel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+            
+
+        .imagenes {
+            
+            display: flex;
+            width: 600%;
+            height: 100%;            
+
+            animation: slide 20s infinite;
+        }
+
+        .imagenes img {
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes slide {
+            0% { margin-left: 0; }
+            5% { margin-left: 0; }
+
+            25% { margin-left: -100%; }
+            35% { margin-left: -100%; }
+
+            40% { margin-left: -200%; }
+            55% { margin-left: -200%; }
+
+            60% { margin-left: -300%; }
+            75% { margin-left: -300%; }
+
+            78% { margin-left: -400%; }
+            85% { margin-left: -400%; }
+
+            87% { margin-left: -500%; }
+            95% { margin-left: -500%; }
+
+            100% { margin-left: 0; }
+        }
+        
+
+        h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            color: white;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+
+        }
+
+        section div div{
+            box-sizing: border-box;
+            margin: 5px 20px 5px 20px;
+            display: flex;
+        }
+
+        iframe{
+            border-radius: 10px;
+            box-shadow: 0 5px 30px #000;
+            width: 600px;
+            height: auto;
+        }
+
+        .seccion1{
+            background-color: rgb(0, 0, 0);
+        }
+        .seccion2{
+            background-color: rgb(0, 0, 0);
+        }
+        .seccion3{
+            background-color: rgb(0, 0, 0);
+        }
+        .seccion4{
+            background-color: rgb(0, 0, 0);
+        }
+        
+        .botonmenu{
+            justify-content: space-between;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .creador{
+            font-size: 16px;
+        }
+
+
+
+
+
+
+
+
+
+
+            footer{
+
+                margin: 0;
+                background-color: rgb(0, 0, 0);
+                padding: 2px 0 0 0;
+            }
+            footer div li a{
+                padding: 3px;
+                text-decoration-line: none;
+                color: #000;
+            }
+            footer div li{
+                list-style: none;
+                text-align: center;
+            }
+            footer p{
+                text-align: center;
+                color: white;
+            }
+    </style>
+    
+
+</head>
+<body id="inicio">
+    <header>
+        <nav >  
+            <li>
+                <a class="adornoA" href="#about_us">Descripción</a>
+                <a class="adornoA" href="#contact">Temporadas</a>
+                <a class="adornoA" href="#ayuda">Creadores</a>
+                <a class="adornoA" href="#nosotros">Nosotros</a>
+            
+            </li>
+            <div>
+                <a  href="https://www.bing.com/ck/a?!&&p=7373cad4ac7c528eJmltdHM9MTcyNzU2ODAwMCZpZ3VpZD0yYmU5MGYyZS1hYjM3LTZlMjEtMTdjYy0xYjQ2YWE4ZTZmN2ImaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=2be90f2e-ab37-6e21-17cc-1b46aa8e6f7b&psq=tiktok&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9lcy8jOn46dGV4dD1UaWtUb2s6IGxhcyB0ZW5kZW5jaWFzIGVtcGllemFuIGFxdcOtLiBMb3MgZXNwZWN0YWRvcmVzIHB1ZWRlbiBkZXNjdWJyaXIgbWlsbG9uZXM&ntb=1">
+                    <img src="https://static.vecteezy.com/system/resources/previews/024/273/770/original/tiktok-logo-transparent-free-png.png" alt="logo de tik tok" style="width: 50px; height:auto">
+                </a>
+                <a  href="https://web.whatsapp.com/#:~:text=Quickly%20send%20and%20receive%20WhatsApp%20messages%20right%20from%20your%20computer.">
+                    <img src="https://static.vecteezy.com/system/resources/previews/035/270/630/large_2x/whatsapp-logo-black-and-white-whatsapp-black-logo-transparent-free-png.png" alt="logo de whatsaap" style="width: 50px; height:auto">
+                </a>
+                <a  href="https://es-la.facebook.com/#:~:text=Facebook%20te%20ayuda%20a%20comunicarte%20y%20compartir%20con%20las%20personas">
+                    <img src="https://i.pinimg.com/originals/fc/0c/d0/fc0cd059740272d21b485c51289ec99d.png" alt="logo de facebook" style="width: 50px; height:auto">
+                </a>
+            </div>  
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="carrusel">
+            <div class="imagenes">
+                <img src="https://wallpaperaccess.com/full/463608.jpg" alt="Imagen 1">
+    
+                <img src="https://wallpapercave.com/wp/wp2279300.jpg" alt="Imagen 2">
+    
+                <img src="https://i.ytimg.com/vi/7me9oL8QLw0/maxresdefault.jpg" alt="Imagen 3">
+    
+                <img src="https://wallpapercave.com/wp/wp2655651.jpg" alt="Imagen 4">
+    
+                <img src="https://wallpaperaccess.com/full/2625484.jpg" alt="Imagen 5">
+    
+                <img src="https://cdn.wallpapersafari.com/49/23/t3LHfT.jpg" alt="Imagen 6">
+            </div>
+        </div>
+
+        <h1>YU-GI-OH FANDOM</h1>
+       
+        <section id="about_us" class="seccion1">
+            <div style="margin: 20px; border: 1px solid rgb(2, 3, 105); border-radius: 10px; background-color:rgb(2, 3, 105); box-shadow:0 10px 15px #390a6e">
+                <h2>
+                    DESCRIPCIÓN
+                </h2>
+
+                <div>
+                    <div style="margin: 5px; border: 1px solid #42065e; background-color:#42065e; border-radius: 10px; width:600px; height:200px">   
+                        <p>Bienvenido a yu-gi-oh fandom Tu Portal Definitivo de Yu-Gi-Oh! <br><br> Sumérgete en el emocionante mundo de Yu-Gi-Oh!, el popular juego de cartas intercambiables que ha cautivado a millones de duelistas en todo el mundo. En yu-gi-oh fandom, encontrarás todo lo que necesitas para mejorar tus habilidades, descubrir las últimas cartas, estrategias y noticias, y conectarte con otros apasionados del juego.
+                        </p>
+                    </div>
+
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/timXx6CBjoA?si=1nOI_Yz5WRMKhjDF" allowfullscreen style="width: 600px; height:300px"></iframe>
+                    </div>
+            
+                </div>
+
+                
+                <div id="botonmenu">
+                    <p> <a class="adornoB" href="#inicio" >volver al menu</a></p>
+                </div>
+                    
+           </div>  
+
+        </section>
+
+        <section id="contact" class="seccion2">
+            <div style="margin: 20px; border: 1px solid rgb(2, 3, 105); border-radius: 10px; background-color:rgb(2, 3, 105); box-shadow:0 10px 15px #430f7e">
+                <h2>
+                    TEMPORADAS
+                </h2>
+
+                <div>  
+                    <div>
+                        <iframe src="https://es.wikipedia.org/wiki/Yu-Gi-Oh!#:~:text=Yu-Gi-Oh!%20(%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B,,%20Y%C5%AB%E2%98%86gi%E2%98%86%C5%8D;?,%20lit.:%20%C2%ABEl%20rey%20de%20los%20juegos%C2%BB)%20[5]" frameborder="60px" style="width: 600px; height:300px"></iframe>
+                    </div>
+                
+                    <div style="margin: 5px; border: 1px solid #42065e; background-color:#42065e; border-radius: 10px; width:600px; height:320px">   
+                        <p>lista de temporadas: <br></p>
+                        <ul style="list-style: none; text-decoration-line:none">
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLMlpzmvluuYuDqhm2V8Y1aTvARmt5ySaq" style="color: white;">Duel Monsters</a>
+                            </li> 
+                            <br>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLMlpzmvluuYsiU7kpCHnKrahnJq7TxWUY" style="color: white;">Yu-Gi-Oh GX</a><br>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLMlpzmvluuYuF-gv3BuPcTZoKj5Ysti77" style="color: white;">Yu-Gi-Oh GX 2</a><br> 
+                            </li>
+                            <br>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLMlpzmvluuYvDHkPONaEQiwshddI2pbBy" style="color: white;">Yu-Gi-Oh!5D's</a><br>
+                            </li>
+                            <br>
+                            <li style="list-style: none;">
+                                <p>Ya seas un fan nostálgico de la serie original o alguien que sigue las nuevas entregas como Yu-Gi-Oh! VRAINS o Yu-Gi-Oh! SEVENS, en yu-gi-oh fandom encontrarás todo lo que necesitas para sumergirte en el vasto universo de Yu-Gi-Oh!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="botonmenu">
+                    <p> <a class="adornoB" href="#inicio" >volver al menu</a></p>
+                </div>        
+           </div>  
+        </section>
+
+        <section id="ayuda" class="seccion3">
+            <div style="margin: 20px; border: 1px solid rgb(2, 3, 105); border-radius: 10px; background-color:rgb(2, 3, 105); box-shadow:0 10px 15px #430f7e">
+                <h2>
+                    CREADOR
+                </h2>
+
+                <div>
+                    
+                    <div>
+                        <iframe src="https://joelr64.github.io/joelR/calculadora roque.html" frameborder="0" style="width: 350px; height:550px"></iframe>
+                    </div>
+                
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Kazuki_takahashi.jpg/220px-Kazuki_takahashi.jpg" alt="imagen creador" style="width: 180px; height:200px">
+                    </div>
+                    <div style="margin: 5px; border: 1px solid #42065e; background-color:#42065e; border-radius: 10px; width:800px; height:450px">  
+                        <p class="creador">Nació el 4 de octubre de 1961, en la capital japonesa de Tokio.
+
+                            Empezó como un mangaka en 1982. Su primer trabajo fue Tokio no Tsuma, publicado en 1990. Otro de sus primeros trabajos fue Tennenshokudanji Buray, obra que terminó con dos volúmenes de manga y fue publicado desde 1991 hasta 1992.
+                            
+                            Takahashi no encontró el éxito hasta 1996, cuando creó Yu-Gi-Oh!.
+                            
+                            Le gustaba jugar a juegos como el shōgi (ajedrez japonés), mahjong (juego tradicional chino), juegos de cartas y juegos de mesa. <br> <br>
+
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://th.bing.com/th/id/OIP.McidrvFW_71Y6B4ozMB5cAHaEK?rs=1&pid=ImgDetMain" alt="imagen yu-gi-oh" style="width: 400px; height:600px">
+                    </div>
+                </div>
+                <div id="botonmenu">
+                    <p> <a class="adornoB" href="#inicio" >volver al menu</a></p>
+                </div>    
+           </div>  
+        </section>
+
+        <section id="nosotros" class="seccion4">
+            <div style="margin: 20px; border: 1px solid rgb(2, 3, 105); border-radius: 10px; background-color:rgb(2, 3, 105); box-shadow:0 10px 15px #430f7e">
+                <h2>
+                    NOSOTROS
+                </h2>
+
+                <div>
+                    
+                    <div>
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9NgV4l7ikj80VPdX8H-x0shx9Sq0xyJsm0yQcccXvo6ChM3aGlY7yTqqmthNw2YRCEW-1yPYP5s45/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" frameborder="60px" style="width: 600px; height:600px"></iframe>
+                    </div>
+                
+                    <div style="margin: 5px; border: 1px solid #42065e; background-color:#42065e; border-radius: 10px; width:600px; height:180px">   
+                        <p>En Yu-Gi-Oh fandom, somos un grupo de apasionados duelistas y fanáticos de Yu-Gi-Oh! que compartimos una misión clara: brindar el mejor contenido, noticias y recursos para todos los seguidores de este increíble universo de cartas y anime. Creemos que Yu-Gi-Oh! es más que un juego, es una comunidad vibrante y emocionante que une a personas de todo el mundo a través de su amor por los duelos y las estrategias.
+                        <br><br>
+                            <img src="https://voyager-production.s3-ap-southeast-1.amazonaws.com/marketplace/original/galleonph-8868159-0.jpg" alt="imagen dioses egipcios" style="width: 600px; height:300px">
+                        </p>
+                        
+                    </div>
+                </div>
+                <div id="botonmenu">
+                    <p> <a class="adornoB" href="#inicio" >volver al menu</a></p>
+                </div> 
+           </div>  
+        </section>   
+    </main>   
+</body>
+
+<footer>
+    <div>
+        <h3></h3>
+        <li>
+            <a href="https://www.youtube.com/user/Youtube#:~:text=YouTube's%20Official%20Channel%20helps%20you%20discover%20what's%20new%20&%20trending" target="_blank">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/930/569/original/youtube-logo-youtube-icon-transparent-free-png.png" alt="logo de youtube " style="width: 50px; height:auto">
+            </a>
+            <a href="https://www.bing.com/ck/a?!&&p=7373cad4ac7c528eJmltdHM9MTcyNzU2ODAwMCZpZ3VpZD0yYmU5MGYyZS1hYjM3LTZlMjEtMTdjYy0xYjQ2YWE4ZTZmN2ImaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=2be90f2e-ab37-6e21-17cc-1b46aa8e6f7b&psq=tiktok&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9lcy8jOn46dGV4dD1UaWtUb2s6IGxhcyB0ZW5kZW5jaWFzIGVtcGllemFuIGFxdcOtLiBMb3MgZXNwZWN0YWRvcmVzIHB1ZWRlbiBkZXNjdWJyaXIgbWlsbG9uZXM&ntb=1">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/273/770/original/tiktok-logo-transparent-free-png.png" alt="logo de tik tok" style="width: 50px; height:auto">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/930/473/original/instagram-logo-instagram-icon-transparent-free-png.png" alt="logo de instagram" style="width: 50px; height:auto">
+            </a>
+            <a href="https://web.whatsapp.com/#:~:text=Quickly%20send%20and%20receive%20WhatsApp%20messages%20right%20from%20your%20computer.">
+                <img src="https://static.vecteezy.com/system/resources/previews/035/270/630/large_2x/whatsapp-logo-black-and-white-whatsapp-black-logo-transparent-free-png.png" alt="logo de whatsapp" style="width: 50px; height:auto">
+            </a>
+            <a href="https://es-la.facebook.com/#:~:text=Facebook%20te%20ayuda%20a%20comunicarte%20y%20compartir%20con%20las%20personas">
+                <img src="https://i.pinimg.com/originals/fc/0c/d0/fc0cd059740272d21b485c51289ec99d.png" alt="logo de facebook" style="width: 50px; height:auto; border-radius: 50px;">
+            </a>
+        </li>  
+    </div>
+    <p>® todos los derechos reservados JRA evolution</p>
+</footer>
+</html>
